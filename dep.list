@@ -1,0 +1,2 @@
+.cache/endian.o: src/endian.c src/endian.h
+.cache/test.o: test/test.c
