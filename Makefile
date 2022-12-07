@@ -3,7 +3,7 @@ CFLAGS=-Wall -Wextra -pedantic -std=c18 -O2
 LIBS=
 
 INCLUDE_PATH=/usr/include/
-LIB_PATH=/usr/lib64
+LIB_PATH=/usr/lib64/
 
 TARGET=linendian.a
 CACHE=.cache
@@ -18,21 +18,18 @@ TEST += endian.o
 
 
 OBJ=$(addprefix $(CACHE)/,$(MODULES))
-T_OBJ=$(addprefix $(CACHE),$(TEST))
+T_OBJ=$(addprefix $(CACHE)/,$(TEST))
+
+
+$(CACHE)/%.o:
+	$(CC) $(CFLAGS) -c $< -o $@
 
 
 all: env $(OBJ)
 	ar -crs $(OUTPUT)/$(TARGET) $(OBJ)
 
-%.o:
-	$(CC) $(CFLAGS) -c $< -o $@
-
 
 -include dep.list
-
-
-exec: all
-	$(OUTPUT)/$(TARGET)
 
 
 .PHONY: env dep clean install
