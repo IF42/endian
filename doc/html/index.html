@@ -69,7 +69,7 @@ $(function() {
 <div class="contents">
 <div class="textblock"><p><a class="anchor" id="md_README"></a>Endian is library for working with data endianity for every primityve data type from 2 up to 64 bytes. This library is possible to use everywhere on PC or embedded systems, because it uses only bit shifting for inversing byte order.</p>
 <h1><a class="anchor" id="autotoc_md1"></a>
-Ussage</h1>
+Usage</h1>
 <p>For every dyta type is defined own function for inversing byte order:</p><ul>
 <li>swap_endian_int16</li>
 <li>swap_endian_int32</li>
@@ -98,6 +98,13 @@ Ussage</h1>
 <div class="line">            , .b = <a class="code" href="endian_8h.html#abad5958d246e85acd87a184374471582">swap_endian</a>(<span class="keyword">self</span>.b);</div>
 <div class="line">        };</div>
 <div class="line">}</div>
+</div><!-- fragment --><h1><a class="anchor" id="autotoc_md2"></a>
+Installation</h1>
+<p>Library has no dependency so it can be used directly copy-pased in source code or can be build and packed as static library. Library is possible to use on every platforms Linux, Mac, Windows embedded system. For building and installation is prepared simple Makefile. In file dep.list are stored source code dependencies for building, so if this file is not in the same directory as Makefile, simple call command: </p><div class="fragment"><div class="line">$ make dep</div>
+</div><!-- fragment --><p> For building library simply call command: </p><div class="fragment"><div class="line">$ make</div>
+</div><!-- fragment --><p> For ensure of library correctnes is possible to call test by calling command: </p><div class="fragment"><div class="line">$ make test</div>
+</div><!-- fragment --><p> For installing library into system directories simply call command: </p><div class="fragment"><div class="line">$ sudo make install</div>
+</div><!-- fragment --><p> Under Windows with MSYS2 system installed is not sudo command and is necessary to change install directories: </p><div class="fragment"><div class="line">$ make install INCLUDE_PATH=/mingw64/include/ LIB_PATH=/mingw64/lib/</div>
 </div><!-- fragment --> </div></div><!-- PageDoc -->
 </div><!-- contents -->
 <!-- start footer part -->
