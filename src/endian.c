@@ -1,6 +1,7 @@
 /**
 ** @file endian.c
-** @brief 
+** @brief Functions for changing endianity for every primitive 
+** data types with more than 2-bytes length
 */
 #include "endian.h"
 
