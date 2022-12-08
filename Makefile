@@ -5,7 +5,7 @@ LIBS=
 INCLUDE_PATH=/usr/include/
 LIB_PATH=/usr/lib64/
 
-TARGET=linendian.a
+TARGET=libendian.a
 CACHE=.cache
 OUTPUT=$(CACHE)/release
 
