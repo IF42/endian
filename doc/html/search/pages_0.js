@@ -1,4 +1,4 @@
 var searchData=
 [
-  ['endian_13',['endian',['../index.html',1,'']]]
+  ['endian_13',['Endian',['../index.html',1,'']]]
 ];
