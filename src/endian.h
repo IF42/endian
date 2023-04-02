@@ -41,10 +41,11 @@ swap_endian_int64(uint64_t n);
         , uint16_t: swap_endian_int16(n)                \
         , int32_t : swap_endian_int32(n)                \
         , uint32_t: swap_endian_int32(n)                \
-        , float   : swap_endian_int32((uint32_t) n)     \
+        , float   : swap_endian_int32((int32_t) n)     \
         , uint64_t: swap_endian_int64(n)                \
         , int64_t : swap_endian_int64(n)                \
-        , double  : swap_endian_int64((uint64_t) n)) 
+        , double  : swap_endian_int64((int64_t) n)) 
             
-
 #endif
+
+

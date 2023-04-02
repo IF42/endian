@@ -122,6 +122,12 @@ double_test(void)
 int
 main(void)
 {
+    float t = 10.1;
+
+    //printf("%f : %f : %f\n", t, (float)swap_endian_int32((int32_t)t), (float)swap_endian_int32(swap_endian_int32((int)(t))));
+    
+    printf("%f : %f : %f\n", t, (float) swap_endian(t), (float)swap_endian(swap_endian(t)));
+
     int16_test();
     int32_test();
     float_test();
