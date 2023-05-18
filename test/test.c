@@ -14,11 +14,11 @@ int16_test(void)
 {
     uint16_t value = rand() % USHRT_MAX;
 
-    printf("swap_endian_int16 - ");
+    printf("endian_swap_int16 - ");
 
     for(size_t i = 0; i < TEST_CYCLE; i++)
     {
-        uint16_t double_swap_value = swap_endian(swap_endian(value));
+        uint16_t double_swap_value = endian_swap(endian_swap(value));
 
         if(value != double_swap_value)
         {
@@ -36,11 +36,11 @@ int32_test(void)
 {
     uint32_t value = rand() % UINT_MAX;
 
-    printf("swap_endian_int32 - ");
+    printf("endian_swap_int32 - ");
 
     for(size_t i = 0; i < TEST_CYCLE; i++)
     {
-        uint32_t double_swap_value = swap_endian(swap_endian(value));
+        uint32_t double_swap_value = endian_swap(endian_swap(value));
 
         if(value != double_swap_value)
         {
@@ -58,11 +58,11 @@ float_test(void)
 {
     float value = rand() % UINT_MAX;
 
-    printf("swap_endian_int32 (float) - ");
+    printf("endian_swap_int32 (float) - ");
 
     for(size_t i = 0; i < TEST_CYCLE; i++)
     {
-        float double_swap_value = swap_endian(swap_endian(value));
+        float double_swap_value = endian_swap(endian_swap(value));
 
         if(value != double_swap_value)
         {
@@ -80,11 +80,11 @@ int64_test(void)
 {
     uint64_t value = rand() % ULONG_MAX;
 
-    printf("swap_endian_int64 - ");
+    printf("endian_swap_int64 - ");
 
     for(size_t i = 0; i < TEST_CYCLE; i++)
     {
-        uint64_t double_swap_value = swap_endian(swap_endian(value));
+        uint64_t double_swap_value = endian_swap(endian_swap(value));
 
         if(value != double_swap_value)
         {
@@ -102,11 +102,11 @@ double_test(void)
 {
     double value = rand() % ULONG_MAX;
 
-    printf("swap_endian_int64 (double) - ");
+    printf("endian_swap_int64 (double) - ");
 
     for(size_t i = 0; i < TEST_CYCLE; i++)
     {
-        double double_swap_value = swap_endian(swap_endian(value));
+        double double_swap_value = endian_swap(endian_swap(value));
 
         if(value != double_swap_value)
         {
@@ -124,9 +124,9 @@ main(void)
 {
     float t = 10.1;
 
-    //printf("%f : %f : %f\n", t, (float)swap_endian_int32((int32_t)t), (float)swap_endian_int32(swap_endian_int32((int)(t))));
+    //printf("%f : %f : %f\n", t, (float)endian_swap_int32((int32_t)t), (float)endian_swap_int32(endian_swap_int32((int)(t))));
     
-    printf("%f : %f : %f\n", t, (float) swap_endian(t), (float)swap_endian(swap_endian(t)));
+    printf("%f : %f : %f\n", t, (float) endian_swap(t), (float)endian_swap(endian_swap(t)));
 
     int16_test();
     int32_test();
